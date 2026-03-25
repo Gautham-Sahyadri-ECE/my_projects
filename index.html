@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Birthday Surprise 🎉</title>
+  <title>Something Cool 😉</title>
 
   <style>
     body {
@@ -47,7 +47,7 @@
 
     #cake {
       display: none;
-      width: 240px;
+      width: 260px;
       margin: 30px auto;
       animation: pop 1s ease;
     }
@@ -60,13 +60,12 @@
 
     #finalMsg {
       display: none;
-      font-size: 32px;
+      font-size: 34px;
       margin-top: 15px;
       font-weight: bold;
       line-height: 1.5;
     }
 
-    /* Gift button */
     #giftBtn {
       display: none;
       margin-top: 20px;
@@ -75,13 +74,7 @@
       color: black;
     }
 
-    /* Video */
-    #videoContainer {
-      display: none;
-      margin-top: 20px;
-    }
-
-    /* Confetti blast */
+    /* Confetti */
     .confetti {
       position: fixed;
       width: 10px;
@@ -123,24 +116,13 @@
 <img id="cake" src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png">
 
 <div id="finalMsg">
-  happy birthday darrling 🎉<br>
+  happy birthday darling 🎉<br>
   happy birthday Pallu 🎂
 </div>
 
 <button id="giftBtn" onclick="openGift()">🎁 Unbox</button>
 
-<div id="videoContainer" style="display:none; width:80%; max-width:800px; margin:20px auto;">
-  <iframe id="driveVideo"
-  style="width:100%; height:450px; border-radius:12px; box-shadow: 0 0 30px rgba(0,0,0,0.5);"
-  src=""
-  frameborder="0"
-  allow="autoplay">
-</iframe>
-</div>
-
 <script>
-const FILE_ID = "154DXdthZP7Kqi2jrBSkhviMRHCBjRun8";
-
 function typeText(text, callback) {
   let i = 0;
   let output = document.getElementById("output");
@@ -191,16 +173,12 @@ function createFloatingEmojis() {
 }
 
 function openGift() {
-  let container = document.getElementById("videoContainer");
-  let video = document.getElementById("driveVideo");
-
-  container.style.display = "block";
-
-  // autoplay + slight delay ensures proper loading
-  video.src = "https://drive.google.com/file/d/" + FILE_ID + "/preview";
-
-  // hide button after clicking (clean UI)
   document.getElementById("giftBtn").style.display = "none";
+
+  // small delay for effect
+  setTimeout(() => {
+    window.location.href = "https://youtu.be/p2o1uc3VYXI";
+  }, 500);
 }
 
 function startSystem() {
